@@ -16,7 +16,7 @@
 #include <rte_mbuf.h>
 
 #define RX_RING_SIZE 1024
-#define TX_RING_SIZE 0 
+#define TX_RING_SIZE 0
 
 #define NUM_MBUFS 8191
 #define MBUF_CACHE_SIZE 250
@@ -30,7 +30,7 @@ uint64_t packet_count = 0;
 
 static const struct rte_eth_conf port_conf_default = {
 	.rxmode = {
-		.max_rx_pkt_len = RTE_ETHER_MAX_LEN,
+		.max_lro_pkt_size = RTE_ETHER_MAX_LEN,
 	},
 };
 
